@@ -31,6 +31,10 @@ body {
    letter-spacing: 0.03em;
 }
 /* Reset styles */
+.container {
+   width: 1200px;
+   margin: 0 auto;
+}
 
 .list {
    list-style: none;
