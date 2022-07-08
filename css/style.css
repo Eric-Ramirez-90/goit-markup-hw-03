@@ -62,15 +62,18 @@ h6,
 p {
   margin: 0;
 }
-/* Частковий ресет стилей браузера end */
 
+img {
+  display: block;
+}
+
+/* Частковий ресет стилей браузера end */
 .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -92,12 +95,16 @@ p {
 }
 
 /* WebStudio Page*/
+
+/* Main Header Flex */
 .flex-nav {
   display: flex;
   align-items: center;
 }
-/* Main Header Flex */
 
+.header {
+  border: 1px solid #ececec;
+}
 /* Header logo */
 .logo {
   color: var(--accent-text-color);
@@ -174,6 +181,8 @@ p {
   text-transform: uppercase;
 }
 .button {
+  border-radius: 4px;
+
   color: var(--hero-text-color);
   background-color: var(--accent-text-color);
 
@@ -209,7 +218,10 @@ p {
 .about {
   padding-top: 0;
 }
-
+.about .items {
+  display: flex;
+  gap: 30px;
+}
 .about .title {
   margin-bottom: 50px;
   text-align: center;
@@ -219,19 +231,30 @@ p {
   font-size: 36px;
   line-height: 1.16;
 }
+.about .item {
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
 
 /* Section Team */
 .team {
   background-color: var(--team-background-color);
 }
+
 .headline {
   margin-bottom: 50px;
-  text-align: center;
 
   color: var(--title-text-color);
 
   font-size: 36px;
   line-height: 1.16;
+  text-align: center;
+}
+.team .items {
+  display: flex;
+  gap: 30px;
+}
+.team .item {
+  flex-basis: calc((100% - 30px * 3) / 4);
 }
 .team .title {
   margin-bottom: 10px;
@@ -241,10 +264,18 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+  text-align: center;
 }
 .team .text {
   font-size: 16px;
   line-height: 1.18;
+  text-align: center;
+}
+.team-wrapper {
+  padding-top: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  padding-left: 5px;
 }
 
 /* Footer */
@@ -259,10 +290,21 @@ p {
 .footer .accent {
   color: var(--hero-text-color);
 }
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
 .address {
   font-style: normal;
 }
 .address .link {
+  display: inline-block;
+  margin-bottom: 9px;
+
   color: rgba(255, 255, 255, 0.6);
 
   font-weight: 400;
@@ -278,7 +320,18 @@ p {
 /* Page Porfolio */
 
 /* Section Filters Button */
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+.filter .item:not(:last-child) {
+  margin-right: 8px;
+}
 .filter-btn {
+  border: #f5f4fa;
+  border-radius: 4px;
+
   color: var(--title-text-color);
   background-color: var(--team-background-color);
 
@@ -303,10 +356,13 @@ p {
 }
 .gallery-item {
   flex-basis: calc((100% - 30px * 2) / 3);
-
-  outline: 2px solid red;
 }
 
+.gallery-wrapper {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
 .gallery-item .gallery-title {
   margin-bottom: 4px;
 
