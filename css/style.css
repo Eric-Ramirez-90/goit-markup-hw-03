@@ -65,6 +65,7 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 /* Частковий ресет стилей браузера end */
@@ -102,8 +103,10 @@ img {
   align-items: center;
 }
 
+/* Header Section */
+
 .header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 /* Header logo */
 .logo {
@@ -165,11 +168,18 @@ img {
 }
 
 /* Section Hero */
+
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--hero-background-color);
   text-align: center;
 }
 .hero .title {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 
   color: var(--hero-text-color);
@@ -181,6 +191,7 @@ img {
   text-transform: uppercase;
 }
 .button {
+  padding: 10px 32px;
   border-radius: 4px;
 
   color: var(--hero-text-color);
@@ -196,6 +207,7 @@ img {
 }
 
 /* Section Benefits */
+
 .benefits .items {
   display: flex;
   gap: 30px;
@@ -280,6 +292,8 @@ img {
 
 /* Footer */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: var(--hero-text-color);
   background-color: var(--hero-background-color);
 
@@ -287,13 +301,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
 }
-.footer .accent {
-  color: var(--hero-text-color);
-}
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+
 .footer .logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -303,7 +311,6 @@ img {
 }
 .address .link {
   display: inline-block;
-  margin-bottom: 9px;
 
   color: rgba(255, 255, 255, 0.6);
 
@@ -316,6 +323,12 @@ img {
 .address .link:focus {
   color: var(--accent-text-color);
 }
+.address .link:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer .accent {
+  color: var(--hero-text-color);
+}
 
 /* Page Porfolio */
 
@@ -323,12 +336,13 @@ img {
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
 }
 .filter .item:not(:last-child) {
   margin-right: 8px;
 }
 .filter-btn {
+  padding: 6px 22px;
   border: #f5f4fa;
   border-radius: 4px;
 
